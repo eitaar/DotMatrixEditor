@@ -101,7 +101,6 @@ Files are automatically downloaded with names like `dot-matrix-16x16.svg` or `do
 
 - **Framework**: Nuxt 4.2.1
 - **UI Library**: Vue 3.5.25
-- **Build Tool**: Vite 7.2.6
 - **Language**: TypeScript
 
 ## Browser Support

@@ -261,7 +261,11 @@ const renderCanvas = () => {
   // Clear canvas
   ctx.clearRect(0, 0, canvas.value.width, canvas.value.height);
 
-  // Draw reference image if available
+  // Draw grid background
+  ctx.fillStyle = '#f0f0f0';
+  ctx.fillRect(0, 0, canvas.value.width, canvas.value.height);
+
+  // Draw reference image if available (on top of background)
   if (referenceImage.value) {
     ctx.globalAlpha = imageOpacity.value;
     ctx.drawImage(
@@ -273,10 +277,6 @@ const renderCanvas = () => {
     );
     ctx.globalAlpha = 1;
   }
-
-  // Draw grid background
-  ctx.fillStyle = '#f0f0f0';
-  ctx.fillRect(0, 0, canvas.value.width, canvas.value.height);
 
   // Draw grid lines
   ctx.strokeStyle = '#ddd';
